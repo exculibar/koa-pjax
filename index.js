@@ -1,7 +1,7 @@
 var cheerio = require('cheerio');
 
-function isRedirect(response) {
-    if (response.status != 301 && response.status != 302) {
+function isRedirect(status) {
+    if (status != 301 && status != 302) {
         return false;
     }
     return true;
@@ -33,7 +33,7 @@ function getPjaxContainer(request) {
 module.exports = function(opts) {
     return function *(next) {
         yield next;
-        if ( ! isRedirect(this.res) && isPjax(this.req)) {
+        if ( ! isRedirect(this.res) && isPjax(this.status)) {
             yield next;
             var $ = cheerio.load(this.body);
             var title = $.html('title');

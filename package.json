@@ -1,0 +1,28 @@
+{
+	"name": "koa-pjax",
+	"version": "0.0.1",
+	"description": "Enable the use of PJAX in koa.",
+	"author": {
+		"name": "gaolool",
+		"email": "gaolool@qq.com",
+		"url": ""
+	},
+	"license": "MIT",
+	"keywords": [
+		"koa",
+		"koajs",
+		"pjax",
+		"jquery.pjax"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/exculibar/koa-pjax.git"
+	},
+	"main": "./index.js",
+	"engines": {
+		"node": ">= 0.12.0"
+	},
+		"dependencies": {
+		"cheerio": "~0.19.0"
+	}
+}

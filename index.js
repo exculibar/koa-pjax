@@ -21,8 +21,8 @@ function getPjaxContainer(request) {
     if ( !! request.headers['X-PJAX-Container'.toLowerCase()]) {
         return request.headers['X-PJAX-Container'.toLowerCase()];
     }
-    if (request.querystring.indexOf('_pjax=') != -1) {
-        var container = request.search.match(new RegExp("[\?\&]" + name+ "=([^\&]+)","i"));
+    if (request.url.indexOf('_pjax=') != -1) {
+        var container = request.url.match(new RegExp("[\?\&]" + '_pjax' + "=([^\&]+)","i"));
         if (container != null && container.length < 1) {
             return container[1];
         }

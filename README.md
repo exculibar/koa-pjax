@@ -1,5 +1,5 @@
 # koa-pjax
-A middleware enable the use of PJAX in koa.
+A middleware enable to use of PJAX in koa.
 
 ## Install
 ```Bash

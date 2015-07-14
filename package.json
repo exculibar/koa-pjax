@@ -1,6 +1,6 @@
 {
 	"name": "koa-pjax",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Enable the use of PJAX in koa.",
 	"author": {
 		"name": "gaolool",

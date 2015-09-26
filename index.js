@@ -33,7 +33,7 @@ function getPjaxContainer(request) {
 module.exports = function(opts) {
     return function *(next) {
         yield next;
-        if ( ! isRedirect(this.res) && isPjax(this.status)) {
+        if ( ! isRedirect(this.status) && isPjax(this.req)) {
             yield next;
             var $ = cheerio.load(this.body);
             var title = $.html('title');
